@@ -46,7 +46,6 @@ pub fn pt2() -> usize {
                     pos = next_pos;
 
                     if visited.contains(&(pos, dir)) {
-                        println!("ridx: {}, cidx: {}, pos: {:?}, dir: {:?}", ridx, cidx, pos, dir);
                         res += 1;
                         break;
                     }
