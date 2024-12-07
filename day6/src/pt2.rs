@@ -6,14 +6,13 @@ pub fn pt2() -> usize {
         .map(|s| s.chars().collect())
         .collect();
 
-    let mut pos: (i32, i32) = (0, 0);
+    let mut pos: (i32, i32);
     let mut start_pos: (i32, i32) = (0, 0);
-    let mut dir: (i32, i32) = (-1, 0);
+    let mut dir: (i32, i32);
     let mut visited = HashSet::new();
     for (ridx, r) in map.iter().enumerate() {
         for (cidx, c) in r.iter().enumerate() {
             if *c == '^' {
-                pos = (ridx as i32, cidx as i32);
                 start_pos = (ridx as i32, cidx as i32);
             };
         }
